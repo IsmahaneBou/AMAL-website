@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AMAL - Accueil</title>
+  <link rel="icon"href="images\Picture1.png"/>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #fdf5f7;
+      color: #333;
+    }
+    header {
+      background-color: #f6c5d5;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+    .logo-container {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .logo-container img {
+      height: 50px;
+      width: auto;
+      border-radius: 8px;
+    }
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+      color: white;
+    }
+    nav a {
+      margin: 0 10px;
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    .search-bar {
+      margin: 20px auto;
+      max-width: 500px;
+      display: flex;
+      justify-content: center;
+    }
+    .search-bar input {
+      width: 100%;
+      padding: 10px;
+      border-radius: 25px;
+      border: 1px solid #ddd;
+      font-size: 16px;
+    }
+    .cards-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+    .card {
+      background-color: #fff;
+      border-radius: 20px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      padding: 20px;
+      text-align: center;
+      transition: 0.3s;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+    }
+    .card-icon {
+      font-size: 40px;
+      margin-bottom: 10px;
+      color: #e57ca6;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #f6c5d5;
+      color: white;
+      margin-top: 40px;
+    }
+    .video-section {
+      max-width: 15cm;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+    .video-wrapper {
+      position: relative;
+      padding-top: 66.66%;
+      overflow: hidden;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+    .video-wrapper video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      border-radius: 15px;
+    }
+    .video-section h2, .certification-section h2, .partners-section h2, .testimonials h2, .team-section h2 {
+      text-align: center;
+      color: #e57ca6;
+      font-weight: bold;
+      margin-bottom: 10px;
+      font-size: 1.8rem;
+    }
+    .video-section p, .testimonials blockquote {
+      text-align: center;
+      color: #666;
+      margin-bottom: 20px;
+      font-size: 1rem;
+    }
+    .certification-section, .partners-section, .testimonials, .team-section {
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+    .partner-logos, .team-members {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+    .partner-logos img, .team-members img {
+      width: 100px;
+      height: auto;
+    }
+    .language-switcher {
+      text-align: center;
+      margin: 20px;
+    }
+    .contact-form {
+      max-width: 600px;
+      margin: 40px auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+    .contact-form input, .contact-form textarea {
+      width: 100%;
+      margin-bottom: 15px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+    }
+    .contact-form button {
+      background-color: #e57ca6;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+  <header id="home">
+    <div class="logo-container">
+      <img src="images\\Picture1-removebg-preview.png" alt="شعار مشروع أمل" />
+      <div class="logo">AMAL</div>
+    </div>
+    <nav>
+      <a href="#">Accueil</a>
+      <a href="#">Profil</a>
+      <a href="#">Contact</a>
+      <a href="#">Langue</a>
+      <a href="#">Déconnexion</a>
+    </nav>
+  </header>
+
+  <section class="video-section">
+    <h2>شاهد الفيديو الترويجي</h2>
+    <p>اكتشف كيف يساعدك تطبيق "أمل" في التشخيص المبكر لسرطان الثدي</p>
+    <div class="video-wrapper">
+      <video controls>
+        <source src="images\\Captions_09_04_2025 15_52_49f7f184-eefd-47df-b62a-4cc07b5f1536.mp4" type="video/mp4" />
+        متصفحك لا يدعم تشغيل الفيديو.
+      </video>
+    </div>
+  </section>
+
+  <div class="search-bar">
+    <input type="text" placeholder="Rechercher..." />
+  </div>
+
+  <section class="cards-container">
+    <div class="card">
+      <div class="card-icon">🧠</div>
+      <h3>Analyse des Images</h3>
+      <p>Soumettre vos mammographies pour une analyse assistée.</p>
+    </div>
+    <div class="card">
+      <div class="card-icon">📊</div>
+      <h3>Statistiques</h3>
+      <p>Consultez les résultats statistiques de vos examens.</p>
+    </div>
+    <div class="card">
+      <div class="card-icon">🗂️</div>
+      <h3>Base de Données</h3>
+      <p>Accédez à l'historique et aux rapports médicaux.</p>
+    </div>
+    <div class="card">
+      <div class="card-icon">❓</div>
+      <h3>Aide & Support</h3>
+      <p>Obtenez de l'aide ou contactez notre équipe médicale.</p>
+    </div>
+  </section>
+
+  <div class="contact-form">
+    <h2>تواصل معنا</h2>
+    <form>
+      <input type="text" placeholder="الاسم الكامل" required>
+      <input type="email" placeholder="البريد الإلكتروني" required>
+      <textarea placeholder="رسالتك" rows="4"></textarea>
+      <button type="submit">إرسال</button>
+    </form>
+  </div>
+  
+  <div class="social-icons">
+    <a href="#"><img src="facebook-icon.png" alt="Facebook"></a>
+    <a href="#"><img src="instagram-icon.png" alt="Instagram"></a>
+  </div>
+
+  </footer>
+    &copy; 2025 AMAL. Tous droits réservés.
+  </footer>
+</body>
+</html>
